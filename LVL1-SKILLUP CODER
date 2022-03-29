@@ -1,11 +1,11 @@
--------------------------------------------------LEVEL-1------------------------------------------------------------
--------------------------------------------------EASY---------------------------------------------------------------
+---------------------------------------------------------------------------LEVEL-1---------------------------------------------------------------------------------
+----------------------------------------------------------------------------TYPE:EASY------------------------------------------------------------------------------
 --->INTEGER DIVISION
 
 ##PYTHON SOLUTION
 
-x=int(input())
-print(x//10)
+x=int(input())         ## takes input
+print(x//10)           ##prints floor division of num
 
 
 --->AREA OF CIRCLE
@@ -18,15 +18,15 @@ using namespace std;
 int main()
 {
     int r;
-    cin>>r;
-    cout<<fixed<<setprecision(2)<<3.14*r*r;
-}
+    cin>>r;                                           //reads r
+    cout<<fixed<<setprecision(2)<<3.14*r*r;           //area of circle pi*r*r   pi=3.14      //fixed and setprecision is used to round off number...
+}                                                     //it prints area of circle upto two decimal values
 
 
 ##PYTHON SOLUTION
 
-r=int(input())
-print(round(3.14*r*r,2))
+r=int(input())                          ##for input
+print(round(3.14*r*r,2))                ##round is used to roundoff 
 
 //C SOLUTION
 
@@ -35,8 +35,8 @@ int main()
 {
     int r;
     scanf("%d",&r);
-    printf("%.2f",3.14*r*r);
-}
+    printf("%.2f",3.14*r*r);                   //in c we use %.2f for printing upto 2 decimals
+}                                              //or we can use round but u need to import math module
 
 
 --->COMPOUND INTREST
@@ -49,8 +49,8 @@ int main()
 {
     float p,r,t;
     cin>>p>>r>>t;
-    cout<<fixed<<setprecision(2)<<p*pow((1+r/100.0),t);
-}
+    cout<<fixed<<setprecision(2)<<p*pow((1+r/100.0),t);        //compound intrest formula=p*((1+r/100)^t)
+}                                                              //type casting int/int=int    int/float=float   float/float=float
 
 
 --->SIMPLE INTREST
@@ -62,15 +62,15 @@ using namespace std;
 int main()
 {
     int p,t,r;
-    cin>>p>>t>>r;
+    cin>>p>>t>>r;                                           //simple intrest formula=(p*t*r)/100 if u want floating value then (p*t*r)/100.0  //type casting
     cout<<(p*t*r)/100;
 }
 
 ##PYTHON SOLUTION
 
-s=input()
-x=s.split()
-p=int(x[0])
+s=input()                                   ##we are getting three inputs in single line so u need to take it as string in python if input is in three lines then it wont accept...
+x=s.split()                                 ##we are taking integer data in string format -->split is used to split the string bydefault it splits when there is space
+p=int(x[0])                                 ##already we know that its type is string so typecast into int data type and store in p,r,t variables
 r=int(x[1])
 t=int(x[2])
 print((p*r*t)//100)
@@ -81,7 +81,7 @@ print((p*r*t)//100)
 
 //C++ SOLUTION
 
-#include<bits/stdc++.h>
+#include<bits/stdc++.h>            //input 456  output= 6 explanation=4+5+6=15 i.e 1=5=6 which is required answer
 using namespace std;
 int main()
 {
@@ -91,7 +91,7 @@ int main()
     {
         if(n==0)
         {
-            n=sum;
+            n=sum;             //if u dont understand logic then perform itterations then it will be easy to understand this program!!!
             sum=0;
             
         }
@@ -103,7 +103,7 @@ int main()
 }
 
 
---->PERFECT NUMBER
+--->PERFECT NUMBER              //perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself
 
 //c++ SOLUTION
 
@@ -118,10 +118,10 @@ int main()
     {
         if(n%i==0)
         {
-            sum=sum+i;
+            sum=sum+i;        //storing divisors sum in sum variable 
         }
     }
-    if(sum==n){
+    if(sum==n){               //if that stored divisors sumis equals to given number then it is perfect
         cout<<"True";
     }
     else
