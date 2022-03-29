@@ -1,0 +1,76 @@
+-------------------------------------------------LEVEL-1------------------------------------------------------------
+--->INTEGER DIVISION
+
+##PYTHON SOLUTION
+
+x=int(input())
+print(x//10)
+
+
+--->AREA OF CIRCLE
+
+
+//C++ SOLUTION
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int r;
+    cin>>r;
+    cout<<fixed<<setprecision(2)<<3.14*r*r;
+}
+
+
+##PYTHON SOLUTION
+
+r=int(input())
+print(round(3.14*r*r,2))
+
+//C SOLUTION
+
+#include<stdio.h>
+int main()
+{
+    int r;
+    scanf("%d",&r);
+    printf("%.2f",3.14*r*r);
+}
+
+
+--->COMPOUND INTREST
+
+//C++ SOLUTION
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    float p,r,t;
+    cin>>p>>r>>t;
+    cout<<fixed<<setprecision(2)<<p*pow((1+r/100.0),t);
+}
+
+
+--->SIMPLE INTREST
+
+//C++ SOLUTION
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int p,t,r;
+    cin>>p>>t>>r;
+    cout<<(p*t*r)/100;
+}
+
+##PYTHON SOLUTION
+
+s=input()
+x=s.split()
+p=int(x[0])
+r=int(x[1])
+t=int(x[2])
+print((p*r*t)//100)
+
