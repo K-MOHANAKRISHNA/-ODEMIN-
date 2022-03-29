@@ -1,0 +1,107 @@
+--------------------------------------------------------------------LEVEL-4------------------------------------------------------------------------------------------
+--------------------------------------------------------------------C++ SOLUTIONS------------------------------------------------------------------------------------
+--------------------------------------------------------------------TYPE:EASY----------------------------------------------------------------------------------------
+
+--->SUM OF GIVEN NUMBERS
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,n1,n2;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        cin>>n1>>n2;
+        cout<<n1+n2<<endl;
+    }
+}
+
+
+--->PERFECT SQUARE ROOT OR NOT
+
+//1ST APPROACH
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,c1=0;
+    cin>>n;
+    for(int i=1;i*i<=n;i++)
+    {
+        if(i*i==n){
+            cout<<"True";
+            c1=1;
+        }
+    }
+    if(c1==0)
+    {
+    cout<<"False";
+    }
+}
+
+
+//2ND APPROACH
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,i;
+    cin>>n;
+    i=sqrt(n);
+    if(i*i==n){
+        cout<<"True";
+    }
+    else{
+        cout<<"False";
+    }
+}
+
+--->REVERSE OF A NUMBERS
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,rev=0;
+    cin>>n;
+    while(n!=0)
+    {
+        rev=rev*10+n%10;
+        n=n/10;
+    }
+    cout<<rev;
+}
+
+
+--->LARGEST DIGIT
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,c1=0,high,temp;
+    cin>>n;
+    temp=n;
+    while(n!=0)
+    {
+        c1=c1+1;
+        n=n/10;
+    }
+    high=temp%10;
+    for(int i=1;i<=c1;i++){
+        
+        if(temp%10>high){
+            high=temp%10;
+        }
+        temp=temp/10;
+    }
+    cout<<high;
+    
+}
+
+
+------------------------------------------------------------------------TYPE:MEDIUM----------------------------------------------------------------------
+
+--->UGLY NUMBER      NOT DONE !!!
