@@ -1,0 +1,117 @@
+---------------------------------------------------------------------LEVEL-3----------------------------------------------------------------------------------------
+---------------------------------------------------------------------C++ SOLUTIONS----------------------------------------------------------------------------------
+---------------------------------------------------------------------TYPE:EASY--------------------------------------------------------------------------------------
+
+
+--->REVERSE INTEGER
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,temp,rev=0;
+    cin>>n;
+    temp=n;
+    if(n<0){
+        n=-n;
+    }
+    while(n!=0){
+        rev=rev*10+n%10;
+        n=n/10;
+    }
+    if(temp>0)
+    {
+        cout<<rev;
+    }
+    else
+    {
+        cout<<-rev;
+    }
+}
+
+
+--->Pronic Number or Heteromecic Number
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,c1=0;
+    cin>>n;
+    for(int i=1;i<=n;i++)
+    {
+        if(i*(i+1)==n)
+        {
+            cout<<"YES";
+            c1=1;
+            break;
+        }
+    }
+    if(c1==0)
+    {
+        cout<<"NO";
+    }   
+}
+
+
+--->AUTOMORPHIC NUMBER
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,c1=0,n1,t,s=0;
+    cin>>n;
+    t=n;
+    while(n!=0){
+        c1=c1+1;
+        n=n/10;
+    }
+    n1=t*t;
+    for(int i=0;i<c1;i++)
+    {
+        s=s+(n1%10)*pow(10,i);
+        n1=n1/10;
+    }
+    if(t==s)
+    {
+        cout<<"Automorphic Number";
+    }
+    else
+    {
+        cout<<"Not an Automorphic Number";
+    }
+}
+
+--->AMICABLE NUMBERS
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n1,n2,s1=0,s2=0;
+    cin>>n1;
+    cin>>n2;
+    for(int i=1;i<n1;i++)
+    {
+        if(n1%i==0)
+        {
+            s1=s1+i;
+        }
+    }
+    for(int i=1;i<n2;i++)
+    {
+        if(n2%i==0){
+            s2=s2+i;
+        }
+    }
+    if(s2==n1 && s1==n2){
+        cout<<"Amicable";
+    }
+    else{
+        cout<<"Not Amicable";
+    }
+}
+
+
+//UNIQUE NUMBER----NOT DONE YET
