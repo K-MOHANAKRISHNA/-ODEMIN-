@@ -3,7 +3,7 @@
 ---------------------------------------------------------------------TYPE:EASY--------------------------------------------------------------------------------------
 
 
---->REVERSE INTEGER
+--->REVERSE INTEGER                     //printing the reverse of a number ex:input=429  output=924
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -12,7 +12,7 @@ int main(){
     cin>>n;
     temp=n;
     if(n<0){
-        n=-n;
+        n=-n;                               //in range negative numbers also there...
     }
     while(n!=0){
         rev=rev*10+n%10;
@@ -29,7 +29,7 @@ int main(){
 }
 
 
---->Pronic Number or Heteromecic Number
+--->Pronic Number or Heteromecic Number      //number that is the product of two consecutive integers
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -37,7 +37,7 @@ int main()
 {
     int n,c1=0;
     cin>>n;
-    for(int i=1;i<=n;i++)
+    for(int i=1;i<=n;i++)                  //in this time complexcity is more i think half of giver number of iterations are enough to satisfy....try in this way tooo
     {
         if(i*(i+1)==n)
         {
@@ -53,8 +53,8 @@ int main()
 }
 
 
---->AUTOMORPHIC NUMBER
-
+--->AUTOMORPHIC NUMBER                  //automorphic number is an integer whose square ends with the given integer   5^2=25 in both last digit is equal
+                                       //76=76^2==5776 given number equals to last two digits (76==__76)
 #include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -63,16 +63,16 @@ int main()
     cin>>n;
     t=n;
     while(n!=0){
-        c1=c1+1;
+        c1=c1+1;                    //counting no of digits in a given number it stores count in c1 variable
         n=n/10;
     }
-    n1=t*t;
+    n1=t*t;                         //storing square of given number in n1
     for(int i=0;i<c1;i++)
-    {
-        s=s+(n1%10)*pow(10,i);
+    {                                //we need to check last digits of square number equals to given number
+        s=s+(n1%10)*pow(10,i);       //it stores requires number of last digits in s variable
         n1=n1/10;
     }
-    if(t==s)
+    if(t==s)                        //if s is equals to given number then it is automorphic
     {
         cout<<"Automorphic Number";
     }
@@ -82,30 +82,30 @@ int main()
     }
 }
 
---->AMICABLE NUMBERS
+--->AMICABLE NUMBERS              //two numbers are amicable if each is equal to the sum of the proper divisors of the other 
 
 
 #include<bits/stdc++.h>
 using namespace std;
 int main()
 {
-    int n1,n2,s1=0,s2=0;
+    int n1,n2,s1=0,s2=0;              //1st number = n1,second number =n2
     cin>>n1;
     cin>>n2;
     for(int i=1;i<n1;i++)
     {
         if(n1%i==0)
         {
-            s1=s1+i;
+            s1=s1+i;                 //storing sum of divisors of first number in s1
         }
     }
     for(int i=1;i<n2;i++)
     {
         if(n2%i==0){
-            s2=s2+i;
+            s2=s2+i;                   //storing sum of divisors of second number in s2
         }
     }
-    if(s2==n1 && s1==n2){
+    if(s2==n1 && s1==n2){              //if s2==n1 and s1==n2 then it is amicable
         cout<<"Amicable";
     }
     else{
