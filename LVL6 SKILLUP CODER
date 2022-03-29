@@ -1,0 +1,102 @@
+-------------------------------------------------------------------------LEVEL-6---------------------------------------------------------------------------------------
+-------------------------------------------------------------------------C++ SOLUTIONS---------------------------------------------------------------------------------
+-------------------------------------------------------------------------TYPE:EASY-------------------------------------------------------------------------------------
+
+--->ADAM NUMBER      NOTE---------------SOME TEST CASES FAILED -_-
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,sq,rev1=0,rev2=0;
+    cin>>n;
+    if(n==0){
+        cout<<"True";
+    }
+    sq=n*n;
+    while(sq!=0){
+        rev1=rev1*10+sq%10;
+        sq=sq/10;
+    }
+    while(n!=0){
+        rev2=rev2*10+n%10;
+        n=n/10;
+    }
+    if(rev1==(rev2*rev2)){
+        cout<<"True";
+    }
+    else{
+        cout<<"False";
+    }
+}
+
+
+--->DISARIUM NUMBER
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,c1=0,t,s=0;
+    cin>>n;
+    t=n;
+    while(n!=0){
+        c1=c1+1;
+        n=n/10;
+    }
+    n=t;
+    for(int i=c1;i>0;i--){
+        s=s+pow(n%10,i);
+        n=n/10;
+    }
+    if(s==t){
+        cout<<"True";
+    }
+    else{
+        cout<<"False";
+    }
+}
+
+
+--->ABUNDANT NUMBERS
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,s=0;
+    cin>>n;
+    for(int i=1;i<n;i++){
+        if(n%i==0){
+            s=s+i;
+        }
+    }
+    if(s>n){
+        cout<<"True";
+    }
+    else{
+        cout<<"False";
+    }
+}
+
+
+--->CLOSEST PALINDROME          NOTE DONE!!!
+
+
+--->PALINDROME
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,rev=0,t;
+    cin>>n;
+    t=n;
+    while(n!=0){
+        rev=rev*10+n%10;
+        n=n/10;
+    }
+    if(t==rev){
+        cout<<"True";
+    }
+    else{
+        cout<<"False";
+    }
+}
