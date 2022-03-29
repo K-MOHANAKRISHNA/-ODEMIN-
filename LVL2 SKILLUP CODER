@@ -1,0 +1,101 @@
+----------------------------------------------------------------------------LEVEL-2-----------------------------------------------------------------------------------
+----------------------------------------------------------------------------C++ SOLUTIONS-----------------------------------------------------------------------------
+
+-------------------------------------------------------------------TYPE:EASY--------------------------------------------------------------------------------
+
+-->SPY NUMBER
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,sum=0,prod=1;
+    cin>>n;
+    while(n!=0){
+        sum=sum+n%10;
+        prod=prod*n%10;
+        n=n/10;
+    }
+    if(sum==prod)
+    {
+        cout<<"Spy Number";
+    }
+    else{
+        cout<<"Not Spy Number";
+    }
+}
+
+--->NEON NUMBER 
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n1,n2,sum=0;
+    cin>>n1;
+    n2=n1*n1;
+    while(n2!=0){
+        sum=sum+n2%10;
+        n2=n2/10;
+    }
+    if(sum==n1){
+        cout<<"Neon Number";
+    }
+    else{
+        cout<<"Not Neon Number";
+    }
+}
+
+
+-->LCM(LEAST COMMON MULTIPLE)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n1,n2,max;
+    cin>>n1>>n2;
+    max=(n1>n2)?n1:n2;
+    while(true){
+        if(max%n1==0 && max%n2==0){
+            cout<<max;
+            break;
+        }
+        max=max+1;
+    }
+}
+
+-->NEAREST FIBBONACCI      NOTE----->SOME TEST CASES FAILED<--------------
+
+
+using namespace std;
+int main()
+{
+    int i1=0,i2=1,fib1=0,n,temp=0;
+    cin>>n;
+    if(n==0)
+    {
+        cout<<n;
+    }
+    for(int i=1;i<n;i++)
+    {
+        temp=fib1;
+        fib1=i1+i2;
+        i1=i2;
+        i2=fib1;
+        if(n>temp && n<fib1)
+        {
+            if((temp+fib1)/2==n && (temp+fib1)%2==0)
+            {
+                cout<<temp<<" "<<fib1;
+                break;
+            }
+            else
+            {
+            cout<<temp;
+            break;
+            }
+        }
+        
+    }
+}
