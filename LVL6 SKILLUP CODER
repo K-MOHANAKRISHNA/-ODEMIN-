@@ -5,7 +5,7 @@
 --->ADAM NUMBER      NOTE---------------SOME TEST CASES FAILED -_-
 
 #include<bits/stdc++.h>
-using namespace std;
+using namespace std;                    //number when reversed, the square of the number and the square of the reversed number should be numbers which are reverse of each other
 int main(){
     int n,sq,rev1=0,rev2=0;
     cin>>n;
@@ -30,7 +30,7 @@ int main(){
 }
 
 
---->DISARIUM NUMBER
+--->DISARIUM NUMBER         //number in which the sum of the digits to the power of their respective position is equal to the number itself 
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -56,7 +56,7 @@ int main(){
 }
 
 
---->ABUNDANT NUMBERS
+--->ABUNDANT NUMBERS             //number for which the sum of its proper divisors is greater than the number
 
 
 #include<bits/stdc++.h>
