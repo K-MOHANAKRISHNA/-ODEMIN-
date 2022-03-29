@@ -8,22 +8,22 @@
 using namespace std;
 int main()
 {
-    int n,n1,n2;
+    int n,n1,n2;                //given a number that how many pairs are there and u need to print sum of each pair in a new line
     cin>>n;
-    for(int i=0;i<n;i++)
+    for(int i=0;i<n;i++)        //u need to perform addition as n number of times so its better to go with loops(repeating same task)
     {
-        cin>>n1>>n2;
+        cin>>n1>>n2;              //storing one pair in n1 and n2 and returns sum 
         cout<<n1+n2<<endl;
     }
 }
 
 
---->PERFECT SQUARE ROOT OR NOT
+--->PERFECT SQUARE ROOT OR NOT           //check whether a given number is perfect square or not
 
 //1ST APPROACH
 
 #include<bits/stdc++.h>
-using namespace std;
+using namespace std;                    //so many ways are there go with simple ones....use sqrt which reduces time complexcity
 int main(){
     int n,c1=0;
     cin>>n;
@@ -58,7 +58,7 @@ int main()
     }
 }
 
---->REVERSE OF A NUMBERS
+--->REVERSE OF A NUMBERS          //returns reverse of a given number..
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -75,29 +75,29 @@ int main()
 }
 
 
---->LARGEST DIGIT
+--->LARGEST DIGIT                 //largest digit in given integer ex:9876 in this 9 is largest so output is 9
 
 #include<bits/stdc++.h>
 using namespace std;
 int main()
 {
     int n,c1=0,high,temp;
-    cin>>n;
+    cin>>n;            //storing given number
     temp=n;
     while(n!=0)
     {
-        c1=c1+1;
+        c1=c1+1;         //calculating count of given number
         n=n/10;
     }
-    high=temp%10;
+    high=temp%10;          //intially consider last digit is higher value
     for(int i=1;i<=c1;i++){
         
-        if(temp%10>high){
+        if(temp%10>high){          //check for every digit in number if it is high them update high variable 
             high=temp%10;
         }
         temp=temp/10;
     }
-    cout<<high;
+    cout<<high;                  //after comming out of the loop print high value
     
 }
 
