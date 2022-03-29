@@ -2,7 +2,7 @@
 ------------------------------------------------------------------C++ SOLUTIONS--------------------------------------------------------------------------------------
 ------------------------------------------------------------------TYPE:EASY------------------------------------------------------------------------------------------
 
---->HARSHED NUMBER
+--->HARSHED NUMBER             //if the given number is divisble by sum of its digits then it is harshed number...i think no need to explain this...
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -27,7 +27,7 @@ int main(){
 
 
 
---->GCD OR HCF
+--->GCD OR HCF              //highest common factor
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -44,7 +44,7 @@ int main()
 }
 
 
---->FIBONACCI OR NOT
+--->FIBONACCI OR NOT            //checking whether the given number present in fibbonacci series or not
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -67,7 +67,7 @@ int main(){
 }
 
 
---->FIBBONACCI
+--->FIBBONACCI            //printing fibonacci series upto specified length
 
 
 #include<bits/stdc++.h>
