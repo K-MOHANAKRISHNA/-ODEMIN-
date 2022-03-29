@@ -3,7 +3,7 @@
 
 -------------------------------------------------------------------TYPE:EASY--------------------------------------------------------------------------------
 
--->SPY NUMBER
+-->SPY NUMBER                                 //spy number if the sum and product of its digits are equal. 
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -12,11 +12,11 @@ int main()
     int n,sum=0,prod=1;
     cin>>n;
     while(n!=0){
-        sum=sum+n%10;
+        sum=sum+n%10;                        //storing sum of digits in sum variable and product of digits in prod variable
         prod=prod*n%10;
         n=n/10;
     }
-    if(sum==prod)
+    if(sum==prod)                             //sum and prod are equal then it is spy number
     {
         cout<<"Spy Number";
     }
@@ -25,7 +25,7 @@ int main()
     }
 }
 
---->NEON NUMBER 
+--->NEON NUMBER                     //neon number is nothing but the sum of digits of square of the number is equal to the number
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -33,12 +33,12 @@ int main()
 {
     int n1,n2,sum=0;
     cin>>n1;
-    n2=n1*n1;
+    n2=n1*n1;                    //storing square of the given number in n2
     while(n2!=0){
-        sum=sum+n2%10;
+        sum=sum+n2%10;          //sum of digits of a square number(n2)
         n2=n2/10;
     }
-    if(sum==n1){
+    if(sum==n1){                   //sum is equal to given number then it is neon number
         cout<<"Neon Number";
     }
     else{
@@ -49,7 +49,7 @@ int main()
 
 -->LCM(LEAST COMMON MULTIPLE)
 
-#include<bits/stdc++.h>
+#include<bits/stdc++.h>            //least common multiple by the name we can say the least common multiple which can be divided by  both the numbers
 using namespace std;
 int main()
 {
@@ -68,7 +68,7 @@ int main()
 -->NEAREST FIBBONACCI      NOTE----->SOME TEST CASES FAILED<--------------
 
 
-using namespace std;
+using namespace std;                         //its my approach but its failed if u found any mistake then please intimate me...
 int main()
 {
     int i1=0,i2=1,fib1=0,n,temp=0;
