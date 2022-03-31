@@ -23,7 +23,28 @@ int main(){
 }
 
 
---->HAPPY NUMBER            NOT DONE!!!
+--->HAPPY NUMBER            
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,s=0;
+    cin>>n;
+    while(n!=0 || s>9){
+        if(n==0){
+            n=s;
+            s=0;
+        }
+        s=s+pow(n%10,2);
+        n=n/10;
+    }
+    if(s==1 || s==7){
+        cout<<"True";
+    }
+    else{
+        cout<<"False";
+    }
+}
 
 
 
