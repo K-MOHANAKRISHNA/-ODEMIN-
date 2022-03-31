@@ -1,7 +1,66 @@
 -----------------------------------------------------------------------LEVEL-10---------------------------------------------------------------------------------------
 -----------------------------------------------------------------------C++ SOLUTIONS----------------------------------------------------------------------------------
 -----------------------------------------------------------------------TYPE:EASY--------------------------------------------------------------------------------------
+--->element search in an array
 
+#include <iostream>
+using namespace std;
+   
+int main(){
+    int  count, i, num;
+    cin >> count;
+    int input[count];
+    for(i = 0; i < count; i++){
+        cin >> input[i];
+    }
+      
+    cin >> num;
+      
+    
+    for(i = 0; i < count; i++){
+        if(input[i] == num){
+            cout<<"True";
+            break;
+        }
+    }
+      
+    if(i == count){
+        cout<<"False";
+    }
+ 
+    return 0;
+}
+
+--->average element is in array or not
+
+#include <iostream>
+using namespace std;
+   
+int main(){
+    int  count, i, num,s=0;
+    cin >> count;
+    int input[count];
+    for(i = 0; i < count; i++){
+        cin >> input[i];
+        s=s+input[i];
+    }
+      
+    num=int(s/count);
+      
+    
+    for(i = 0; i < count; i++){
+        if(input[i] == num){
+            cout<<"True";
+            break;
+        }
+    }
+      
+    if(i == count){
+        cout<<"False";
+    }
+ 
+    return 0;
+}
 --->average of the array
 
 #include<bits/stdc++.h>
