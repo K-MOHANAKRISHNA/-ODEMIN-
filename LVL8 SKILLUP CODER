@@ -1,7 +1,155 @@
 --------------------------------------------------------------------LEVEL-8-------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------C++ SOLUTIONS------------------------------------------------------------------------------------
+----------------------------------------------------------------------TYPE:EASY---------------------------------------------------------------------------------------
+
+--->Primes in range
+
+#include<bits/stdc++.h>
+using namespace std;
+bool prime(int n){
+    if(n<=1)return false;
+    for(int i=2;i*i<=n;i++){
+        if(n%i==0)return false;
+    }
+    return true;
+}
+int main(){
+    int f,l;
+    cin>>f>>l;
+    int c=0;
+    for(int i=f;i<=l;i++){
+        if(prime(i)){
+            c++;
+        }
+    }
+    cout<<c;
+}
+
+--->circular prime
+
+#include<bits/stdc++.h>
+using namespace std;
+bool prime(int n){
+    if(n<=1)return false;
+    for(int i=2;i*i<=n;i++){
+        if(n%i==0)return false;
+    }
+    return true;
+}
+int main(){
+    int m,rev=0,t;
+    cin>>m;
+    t=m;
+    int c=0;
+    while(m!=0){
+        rev=rev*10+m%10;
+        m=m/10;
+    }
+    if(prime(t)){
+        c=c+1;
+    }
+    if(prime(rev)){
+        c=c+1;
+    }
+    if(c==2){
+        cout<<"circular prime";
+    }
+    else if(c==1)
+    {
+        cout<<"prime but not a circular prime";
+    }
+    else
+    {
+        cout<<"not prime";
+    }
+}
 ---------------------------------------------------------------------TYPE:MEDIUM--------------------------------------------------------------------------------------
 
+--->Count of the non-prime divisors of a given number
+
+#include<bits/stdc++.h>
+using namespace std;
+bool prime(int n){
+    if(n<=1)return false;
+    for(int i=2;i*i<=n;i++){
+        if(n%i==0)return false;
+    }
+    return true;
+}
+int main(){
+    int m;
+    cin>>m;
+    int c=0;
+    for(int i=1;i<=m;i++){
+        if(m%i==0){
+            if(prime(i)){
+                continue;
+            }
+            else
+            {
+                c=c+1;
+            }
+        }
+    }
+    cout<<c;
+}
+
+--->Program to find out the next prime palindrome number
+
+#include<bits/stdc++.h>
+using namespace std;
+bool prime(int n){
+    if(n<=1)return false;
+    for(int i=2;i*i<=n;i++){
+        if(n%i==0)return false;
+    }
+    return true;
+}
+void pal(int m){
+    int t,rev=0;
+    t=m;
+    while(m!=0){
+        rev=rev*10+m%10;
+        m=m/10;
+    }
+    if(rev==t){
+        if(prime(rev)){
+            cout<<rev;
+            exit(0);
+        }
+    }
+}
+int main(){
+    int a;
+    cin>>a;
+    for(int i=a+1;i<=100000;i++){
+        pal(i);
+    }
+}
+
+--->Battle of Primes
+
+#include<bits/stdc++.h>
+using namespace std;
+bool prime(int n){
+    if(n<=1)return false;
+    for(int i=2;i*i<=n;i++){
+        if(n%i==0)return false;
+    }
+    return true;
+}
+int main(){
+    int n1,n2;
+    cin>>n1>>n2;
+    for(int i=2;i<=1200;i++){
+        if(prime(i)){
+            if(i>(n1+n2)){
+                cout<<i-(n1+n2);
+                break;
+            }
+        }
+    }
+}
 
 --->Generate Prime Numbers In A Interval
 
