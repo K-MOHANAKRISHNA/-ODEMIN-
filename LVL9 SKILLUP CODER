@@ -1,0 +1,139 @@
+---------------------------------------------------------------------------LEVEL-9-------------------------------------------------------------------------------------
+---------------------------------------------------------------------------C++ SOLUTIONS-------------------------------------------------------------------------------
+---------------------------------------------------------------------------TYPE:EASY-----------------------------------------------------------------------------------
+
+--->Absolute difference b/w sum of even and sum of odd indexed elements
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,os=0,es=0;
+    cin>>n;
+    int arr[n];
+    for(int i=1;i<=n;i++){
+        cin>>arr[i];
+    }
+    for(int i=1;i<=n;i++){
+        if(i%2==0){
+            es=es+arr[i];
+        }
+        else{
+           os=os+arr[i];
+        }
+    }
+   cout<<abs(es-os);
+}
+
+
+
+--->Absolute difference b/w sum of even and sum of odd elements
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,os=0,es=0;
+    cin>>n;
+    int arr[n];
+    for(int i=1;i<=n;i++){
+        cin>>arr[i];
+        if(arr[i]%2==0){
+            es=es+arr[i];
+        }
+        else{
+            os=os+arr[i];
+        }
+    }
+    cout<<abs(es-os);
+}
+
+
+--->Sum of Odd Positions
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,os=0;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+        if(i%2==1){
+            os=os+arr[i];
+        }
+    }
+    cout<<os;
+}
+
+
+--->Sum of Even Positions
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,os=0;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+        if(i%2==0){
+            os=os+arr[i];
+        }
+    }
+    cout<<os;
+}
+
+--->ODD Sum
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,os=0;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+        if(arr[i]%2==1){
+            os=os+arr[i];
+        }
+    }
+    cout<<os;
+}
+
+
+--->Even Sum
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,os=0;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+        if(arr[i]%2==0){
+            os=os+arr[i];
+        }
+    }
+    cout<<os;
+}
+
+--->Sum of Array
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,os=0;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+        os=os+arr[i];
+    }
+    cout<<os;
+}
+
+
+
+
