@@ -1,0 +1,118 @@
+-------------------------------------------------------------------LEVEL-15-------------------------------------------------------------------------------------------
+-------------------------------------------------------------------C++ SOLUTIONS--------------------------------------------------------------------------------------
+-------------------------------------------------------------------TYPE:EASY------------------------------------------------------------------------------------------
+
+--->Find the Capacity
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int s,t,b;
+    cin>>s>>t>>b;
+    cout<<(2*s*t*b*512)/1024<<"KB";
+}
+
+--->unique elements
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    int j;
+    for (int i=0; i<n; i++) 
+    { 
+        for (j=0; j<i; j++) 
+           if (arr[i] == arr[j]) 
+               break; 
+        if (i == j) 
+          cout << arr[i] << " "; 
+    } 
+}
+
+--->Even Array
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    int c=0;
+    for(int i=0;i<n;i++){
+        if(arr[i]%2==0){
+            continue;
+        }
+        else{
+            c=1;
+        }
+    }
+    if(c==1){
+        cout<<"False";
+    }
+    else
+    cout<<"True";
+}
+
+--->Strictly EVEN
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,c=0;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    for(int i=0;i<n;i++){
+        if(arr[i]%2==0){
+            if(i%2==0){
+                continue;
+            }
+            else{
+                c=1;
+            }
+        }
+    }
+    if(c==0){
+        cout<<"True";
+    }
+    else
+    cout<<"False";
+}
+
+-->Strictly ODD
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,c=0;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    for(int i=0;i<n;i++){
+        if(arr[i]%2==1){
+            if(i%2==1){
+                continue;
+            }
+            else{
+                c=1;
+            }
+        }
+    }
+    if(c==0){
+        cout<<"True";
+    }
+    else
+    cout<<"False";
+}
