@@ -2,32 +2,36 @@
 -------------------------------------------------------------------------C++ SOLUTIONS---------------------------------------------------------------------------------
 -------------------------------------------------------------------------TYPE:EASY-------------------------------------------------------------------------------------
 
---->ADAM NUMBER      NOTE---------------SOME TEST CASES FAILED -_-
+--->ADAM NUMBER      
 
 #include<bits/stdc++.h>
 using namespace std;                    //number when reversed, the square of the number and the square of the reversed number should be numbers which are reverse of each other
 int main(){
-    int n,sq,rev1=0,rev2=0;
+    int n,sq,rev1=0,rev2=0,t=0;
     cin>>n;
+    t=n;
     if(n==0){
         cout<<"True";
-    }
-    sq=n*n;
-    while(sq!=0){
-        rev1=rev1*10+sq%10;
-        sq=sq/10;
+        exit(0);
     }
     while(n!=0){
-        rev2=rev2*10+n%10;
+        rev1=rev1*10+n%10;
         n=n/10;
     }
-    if(rev1==(rev2*rev2)){
+    sq=rev1*rev1;
+    while(sq!=0){
+        rev2=rev2*10+sq%10;
+        sq=sq/10;
+    }
+    if((t*t)==rev2){
         cout<<"True";
     }
     else{
         cout<<"False";
     }
+    
 }
+
 
 
 --->DISARIUM NUMBER         //number in which the sum of the digits to the power of their respective position is equal to the number itself 
