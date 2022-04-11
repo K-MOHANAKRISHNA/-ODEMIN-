@@ -2,7 +2,129 @@
 -----------------------------------------------------------------------C++ SOLUTIONS--------------------------------------------------------------------------------
 -----------------------------------------------------------------------TYPE:EASY------------------------------------------------------------------------------------
 
+--->Nearest Prime
 
+#include<bits/stdc++.h>
+using namespace std;
+bool prime(long long int n)
+{
+    if(n<=1)return false;
+    for(int i=2;i*i<=n;i++)
+    if(n%i==0)return false;
+    return true;
+}
+int main()
+{
+    long long int n,k,t,tc;
+    cin>>tc;
+    for(long long int i=0;i<tc;i++)
+    {
+        cin>>n;
+        k=n;
+        t=n;
+        while(true)
+        {
+            if(prime(t) || prime(k))
+            {
+                if(prime(t))
+                {
+                    cout<<t<<"\n";
+                    break;
+                }
+                else
+                {
+                    cout<<k<<"\n";
+                    break;
+                }
+            }
+            else
+            {
+                t=t-1;
+                k=k+1;
+             }
+        }
+    }
+}
+
+--->Minimum absolute difference of a number and its closest prime
+
+#include<bits/stdc++.h>
+using namespace std;
+bool prime(int n){
+    if(n<=1)return false;
+    for(int i=2;i*i<=n;i++)
+    if(n%i==0)return false;
+    return true;
+}
+int main(){
+    int n,l=0,m=0,k,t;
+    cin>>n;
+    k=n;
+    t=n;
+    if(prime(k) && prime(n)){
+        cout<<0;
+        exit(0);
+    }
+    while(true){
+        if(prime(k)){
+            l=n-k;
+            break;
+        }
+        else
+        {
+            k=k-1;
+        }
+    }
+    while(true){
+        if(prime(t)){
+            m=t-n;
+            break;
+        }
+        else{
+            t=t+1;
+        }
+    }
+    if(l>m){
+        cout<<m;
+    }
+    else{
+        cout<<l;
+    }
+}
+--->mega prime
+
+#include<bits/stdc++.h>
+using namespace std;
+bool prime(int n){
+    if(n<=1)return false;
+    for(int i=2;i*i<=n;i++)
+    if(n%i==0)return false;
+    return true;
+}
+int main(){
+    int n,f=0,d;
+    cin>>n;
+    d=(int)(log10(n)+1);
+    if(prime(n)){
+        while(n!=0){
+            if(prime(n%10)){
+                f=f+1;
+                n=n/10;
+            }
+            else{
+                cout<<"Not Mega Prime";
+                break;
+            }
+        }
+        if(f==d){
+            cout<<"Mega Prime";
+            f=0;
+        }
+    }
+    else{
+        cout<<"Not Mega Prime";
+    }
+}
 --->PRIME NUMBER
 
 #include<bits/stdc++.h>
